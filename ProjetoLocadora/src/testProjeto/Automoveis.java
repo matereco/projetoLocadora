@@ -71,7 +71,7 @@ public abstract class Automoveis extends AutomoveisInfo {
 		System.out.println("------------------ ");
 		System.out.println("Preencha as informações");
 		System.out.println("Nome: ");
-		sc.nextLine();
+		cliente.setName(sc.nextLine());
 		System.out.print("CPF: ");
 		cliente.setCpf(sc.nextDouble());
 		System.out.print("Idade: ");
@@ -81,9 +81,13 @@ public abstract class Automoveis extends AutomoveisInfo {
 		System.out.println("Valor total do aluguel: ");
 		System.out.println(aluguel.aluguelSimples());
 		System.out.println("Check-Out:");
-		System.out.println("Nome do cliente: "+cliente.getName() 
-				+ "Dias Alugados: " +aluguel.getDiasAlug() 
-				+" Idade: " +cliente.getIdade() );
+		System.out.printf(cliente.getName() 
+				+ "Alugou o " + auto.getModelo()	        
+		        +" por " +aluguel.getDiasAlug()+"dias "
+		        +"CPF: " + cliente.getCpf()
+		        +" IDADE: "+ cliente.getIdade());
+		        
+		        
 	
 		
 		
